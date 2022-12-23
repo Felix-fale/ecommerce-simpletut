@@ -1,6 +1,7 @@
 import "./default.scss";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 // Pages
 import HomePage from "./pages/Homepage/HomePage";
 import Registration from "./pages/Registration/Registration";
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage/>} />
           <Route path="/registration" element={<Registration/>} />
         </Routes>
+        <Footer/>
     </div>
   );
 }
