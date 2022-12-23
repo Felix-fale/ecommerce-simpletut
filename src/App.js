@@ -1,18 +1,22 @@
 import "./default.scss";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+// Pages
 import HomePage from "./pages/Homepage/HomePage";
+import Registration from "./pages/Registration/Registration";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="main">
-        <HomePage />
-      </div>
+      <Header/>
+      <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/registration" element={<Registration/>} />
+        </Routes>
     </div>
   );
 }
 
 export default App;
 
-//Lien du cours https://www.youtube.com/playlist?list=PL-Db3tEF6pB8UO2MmccX-5qeGDX9rek7Q 43:1
+//Lien du cours https://www.youtube.com/playlist?list=PL-Db3tEF6pB8UO2MmccX-5qeGDX9rek7Q 3- 11m59s
