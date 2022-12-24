@@ -2,14 +2,14 @@ import React from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
-function MainLayout(props) {
+function HomePageLayout(props) {
   return (
-    <div>
+    <div className="fullHeight">
       <Header />
-      <div className="main">{props.children}</div>
+      {props.children}
       <Footer/>
     </div>
   );
 }
 
-export default MainLayout;
+export default HomePageLayout;

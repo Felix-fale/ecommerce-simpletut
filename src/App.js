@@ -1,20 +1,28 @@
 import "./default.scss";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 // Pages
 import HomePage from "./pages/Homepage/HomePage";
 import Registration from "./pages/Registration/Registration";
+import MainLayout from "./layouts/MainLayout";
+import HomePageLayout from "./layouts/HomePageLayout";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/registration" element={<Registration/>} />
-        </Routes>
-        <Footer/>
+        <Route exact path="/" element={
+          <HomePageLayout>
+            <HomePage />
+          </HomePageLayout>
+        } />
+
+        <Route exact path="/registration" element={
+          <MainLayout>
+            <Registration />
+          </MainLayout>
+        } />
+      </Routes>
     </div>
   );
 }
